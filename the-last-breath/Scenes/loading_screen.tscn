@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4mu5xpn8qbf2"]
+
+[ext_resource type="Script" uid="uid://dwtpv0qkjwo1f" path="res://Scenes/loading_screen.gd" id="1_oobaa"]
+[ext_resource type="FontFile" uid="uid://2krgn08630oc" path="res://Game Paused DEMO.otf" id="2_0t5xw"]
+
+[node name="LoadingScreen" type="Node2D"]
+script = ExtResource("1_oobaa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 498.0
+offset_bottom = 241.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 138.0
+offset_right = 227.0
+offset_bottom = 291.0
+theme_override_fonts/font = ExtResource("2_0t5xw")
+text = "Preparing Oxygen Systems...
+
+
+
+
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -13.5
+offset_right = 2.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
