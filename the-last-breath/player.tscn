@@ -1,51 +1,16 @@
-extends CharacterBody2D
+[gd_scene load_steps=3 format=3 uid="uid://bun5gqy8r5xh4"]
 
-# ===== PLAYER SETTINGS =====
-@export var speed = 200            # horizontal movement speed
-@export var jump_velocity = -400   # jump strength
-@export var gravity = 900          # gravity force
+[ext_resource type="Script" uid="uid://pusu5d0fly2v" path="res://player.gd" id="1_4flbx"]
 
-# ===== OXYGEN SYSTEM =====
-@export var max_oxygen = 100
-var oxygen = max_oxygen
-@export var oxygen_drain_speed = 5
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
+size = Vector2(20, 21)
 
-# ===== SHIP PARTS =====
-var ship_parts_collected = 0
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_4flbx")
 
-# ===== VELOCITY =====
-var velocity = Vector2.ZERO
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sh265")
 
-func _physics_process(delta):
-    # ---- HORIZONTAL MOVEMENT ----
-    velocity.x = 0
-    if Input.is_action_pressed("ui_right"):
-        velocity.x += speed
-    if Input.is_action_pressed("ui_left"):
-        velocity.x -= speed
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
-    # ---- GRAVITY ----
-    if not is_on_floor():
-        velocity.y += gravity * delta
-    else:
-        velocity.y = 0   # reset velocity when on floor
-
-    # ---- JUMP ----
-    if Input.is_action_just_pressed("ui_up") and is_on_floor():
-        velocity.y = jump_velocity
-
-    # ---- MOVE PLAYER ----
-    velocity = move_and_slide(velocity, Vector2.UP)
-
-func _process(delta):
-    # ---- OXYGEN DRAIN ----
-    oxygen -= oxygen_drain_speed * delta
-    if oxygen <= 0:
-        die()
-
-func add_oxygen(amount):
-    oxygen = min(oxygen + amount, max_oxygen)
-
-func die():
-    # reload current scene on death
-    get_tree().reload_current_scene()
+[node name="Camera2D" type="Camera2D" parent="."]
