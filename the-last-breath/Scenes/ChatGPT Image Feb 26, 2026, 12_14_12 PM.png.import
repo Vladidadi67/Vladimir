@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://begsniaenv0tl"
-path="res://.godot/imported/astronaut-pixel-art-302367159.webp-d9ee6080483cafccf48611aaedcebac0.ctex"
+uid="uid://drfeet5yjolvu"
+path="res://.godot/imported/ChatGPT Image Feb 26, 2026, 12_14_12 PM.png-3b39d6e642955868c712119b65ec75be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://astronaut-pixel-art-302367159.webp"
-dest_files=["res://.godot/imported/astronaut-pixel-art-302367159.webp-d9ee6080483cafccf48611aaedcebac0.ctex"]
+source_file="res://Scenes/ChatGPT Image Feb 26, 2026, 12_14_12 PM.png"
+dest_files=["res://.godot/imported/ChatGPT Image Feb 26, 2026, 12_14_12 PM.png-3b39d6e642955868c712119b65ec75be.ctex"]
 
 [params]
 
