@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://dcp0o26bbjfwn"]
+[gd_scene format=3 uid="uid://dcp0o26bbjfwn"]
 
 [ext_resource type="Texture2D" uid="uid://dxg1xt42w7puw" path="res://Assets/Gemini_Generated_Image_y2y5e5y2y5e5y2y5-removebg-preview (1).png" id="1_pu3va"]
 [ext_resource type="PackedScene" uid="uid://dqcjups6lp73i" path="res://Scenes/crystal.tscn" id="2_0e3vx"]

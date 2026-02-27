@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://m67f77saf2k"]
+[gd_scene format=3 uid="uid://m67f77saf2k"]
 
 [ext_resource type="Script" uid="uid://c8lghky4qimry" path="res://Scenes/main_menu.gd" id="1_8saeu"]
 [ext_resource type="FontFile" uid="uid://h68ux0x7hon3" path="res://Astroz Trial.ttf" id="1_853f1"]
 [ext_resource type="FontFile" uid="uid://2krgn08630oc" path="res://Game Paused DEMO.otf" id="2_8saeu"]
-[ext_resource type="Script" path="res://Scenes/background.gd" id="4_df05h"]
-[ext_resource type="AudioStream" path="res://AM I ALONE_ - DREAMCORE.wav" id="4_ghw46"]
 
 [node name="MainMenu" type="Node2D"]
 position = Vector2(591, 79)
@@ -74,25 +72,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -1
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
+offset_left = -750.0
+offset_top = -238.0
+offset_right = -710.0
+offset_bottom = -198.0
 scale = Vector2(37.655106, 93.07219)
 mouse_filter = 2
-color = Color(0.1087015, 0.2974064, 0.38546866, 1)
-script = ExtResource("4_df05h")
+color = Color(0.05365474, 0, 0.25271687, 0.8352941)
 metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="."]
-offset_left = 371.0
-offset_top = 529.0
-offset_right = 535.0
-offset_bottom = 552.0
-text = "Music By: WHXCXRXS"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_ghw46")
-autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
