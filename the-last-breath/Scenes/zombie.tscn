@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b7mgp8s3jwdb6"]
 
+[ext_resource type="Script" uid="uid://b7ky1yxou704e" path="res://Scenes/zombie.gd" id="1_h3kin"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rnd5q"]
 load_path = "res://.godot/imported/Gemini_Generated_Image_kitqmrkitqmrkitq-removebg-preview.png-a9073dbbf4bf6c7cff7ec08a741d8327.ctex"
 
@@ -53,7 +55,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Zombie" type="Node2D" unique_id=1606376075]
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnd5q"]
+radius = 103.24728
+
+[node name="Zombie" type="CharacterBody2D" unique_id=368560449]
+script = ExtResource("1_h3kin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1502630065]
 position = Vector2(-3.9999924, 2.9999962)
@@ -61,4 +67,9 @@ scale = Vector2(2.027273, 1.9065043)
 sprite_frames = SubResource("SpriteFrames_xx3wb")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.27973092
+frame_progress = 0.54122895
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1893519093]
+position = Vector2(-2.3841858e-07, 2.3841858e-07)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_rnd5q")

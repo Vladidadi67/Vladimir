@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqcjups6lp73i"]
 
 [ext_resource type="Texture2D" uid="uid://c1thk5x8i5lmg" path="res://Assets/ChatGPT Image Feb 26, 2026, 08_39_35 PM.png" id="1_c61q8"]
+[ext_resource type="Script" uid="uid://cs0oi8fsanje8" path="res://Scenes/crystal.gd" id="1_vacj6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vacj6"]
 atlas = ExtResource("1_c61q8")
@@ -71,6 +72,7 @@ radius = 25.0
 height = 122.0
 
 [node name="Crystal" type="Node2D" unique_id=971837942]
+script = ExtResource("1_vacj6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=397543377]
 position = Vector2(4, -18.000008)
