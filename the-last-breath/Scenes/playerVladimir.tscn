@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://upl3dcjl0ky1"]
 
 [ext_resource type="Texture2D" uid="uid://dxg1xt42w7puw" path="res://Assets/Gemini_Generated_Image_y2y5e5y2y5e5y2y5-removebg-preview (1).png" id="1_jlyvm"]
@@ -6,6 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://b7mgp8s3jwdb6" path="res://Scenes/zombie.tscn" id="3_pqikt"]
 [ext_resource type="Texture2D" uid="uid://nbc25qob1fun" path="res://Scenes/Screenshot 2026-02-27 131753.png" id="4_o5e5f"]
 [ext_resource type="PackedScene" uid="uid://upl3dcjl0ky1" path="res://Scenes/playerVladimir.tscn" id="6_wt78t"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://upl3dcjl0ky1"]
+
+[ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_uu2uj"]
+[ext_resource type="Texture2D" uid="uid://dgs1875umxhvo" path="res://Assets/astronaut_run_spritesheet_8f_pad8.png" id="2_1vqqq"]
+>>>>>>> parent of 84b7815 (Merge branch 'main' of https://github.com/Vladidadi67/Vladimir)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j5ir"]
 texture = ExtResource("1_jlyvm")
@@ -1025,6 +1032,7 @@ tile_set = SubResource("TileSet_mgc0q")
 format = 2
 layer_0/tile_data = PackedInt32Array(524275, 327680, 0, 524276, 327680, 0, 524279, 327680, 0, 524280, 327680, 0, 524282, 327680, 0, 524283, 327680, 0, 524285, 327680, 0, 524286, 327680, 0, 524287, 327680, 0, 458752, 327680, 0, 458754, 327680, 0, 458755, 327680, 0, 458757, 327680, 0, 458759, 327680, 0, 458761, 327680, 0, 458763, 327680, 0, 458762, 327680, 0)
 
+<<<<<<< HEAD
 [node name="40Ec666b9a964213Baa85899Ecc43f1eRemovebgPreview" type="Sprite2D" parent="."]
 position = Vector2(-1351, -831)
 texture = ExtResource("2_8hihg")
@@ -1047,3 +1055,23 @@ texture = ExtResource("4_o5e5f")
 [node name="OxygenBar" parent="." instance=ExtResource("3_1vqqq")]
 scale = Vector2(2.2727356, 2.475517)
 transform = Transform2D(2.2727356, 0, 0, 2.475517, 0, 0)
+=======
+[node name="Player Animations" type="Node2D"]
+scale = Vector2(0.4399984, 0.40395603)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
+script = ExtResource("1_uu2uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1.2727356, -88.00003)
+shape = SubResource("CapsuleShape2D_e2o6t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(8, -101)
+scale = Vector2(3.452234, 3.3834674)
+sprite_frames = SubResource("SpriteFrames_2poj3")
+frame = 6
+frame_progress = 0.597803
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+>>>>>>> parent of 84b7815 (Merge branch 'main' of https://github.com/Vladidadi67/Vladimir)
