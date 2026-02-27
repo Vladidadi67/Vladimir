@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://m67f77saf2k"]
+
+[ext_resource type="Script" uid="uid://c8lghky4qimry" path="res://Scenes/main_menu.gd" id="1_8saeu"]
+[ext_resource type="FontFile" uid="uid://h68ux0x7hon3" path="res://Astroz Trial.ttf" id="1_853f1"]
+[ext_resource type="FontFile" uid="uid://2krgn08630oc" path="res://Game Paused DEMO.otf" id="2_8saeu"]
+[ext_resource type="AudioStream" uid="uid://d3vevj43mdo64" path="res://Assets/AM I ALONE_ - DREAMCORE.wav" id="4_ghw46"]
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(591, 79)
+script = ExtResource("1_8saeu")
+
+[node name="GameTitle" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -288.0
+offset_top = 75.0
+offset_right = 288.0
+offset_bottom = 2008.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_853f1")
+theme_override_font_sizes/font_size = 70
+text = "THE LAST BREATH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = -246.0
+offset_top = 166.0
+offset_right = -154.0
+offset_bottom = 191.0
+theme_override_fonts/font = ExtResource("2_8saeu")
+text = "Start Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="TutorialButton" type="Button" parent="."]
+offset_left = 154.0
+offset_top = 167.0
+offset_right = 249.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("2_8saeu")
+text = "How To Play"
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = -18.0
+offset_top = 166.0
+offset_right = 19.0
+offset_bottom = 191.0
+theme_override_fonts/font = ExtResource("2_8saeu")
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -750.0
+offset_top = -238.0
+offset_right = -710.0
+offset_bottom = -198.0
+scale = Vector2(37.655106, 93.07219)
+mouse_filter = 2
+color = Color(0.05365474, 0, 0.25271687, 0.8352941)
+metadata/_edit_use_anchors_ = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ghw46")
+autoplay = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

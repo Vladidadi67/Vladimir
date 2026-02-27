@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3vevj43mdo64"
+path="res://.godot/imported/AM I ALONE_ - DREAMCORE.wav-152d298075dd0cb5524e7ef2ecaa5662.sample"
+
+[deps]
+
+source_file="res://Assets/AM I ALONE_ - DREAMCORE.wav"
+dest_files=["res://.godot/imported/AM I ALONE_ - DREAMCORE.wav-152d298075dd0cb5524e7ef2ecaa5662.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

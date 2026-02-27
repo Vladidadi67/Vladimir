@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dqcjups6lp73i"]
+
+[ext_resource type="Texture2D" uid="uid://c1thk5x8i5lmg" path="res://Assets/ChatGPT Image Feb 26, 2026, 08_39_35 PM.png" id="1_c61q8"]
+[ext_resource type="Script" uid="uid://cs0oi8fsanje8" path="res://Scenes/crystal.gd" id="1_vacj6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vacj6"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(41, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfrgv"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(165, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nfb3"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(785, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8uk5"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(909, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg7jq"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(1033, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7y04"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(1157, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehtgp"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(1281, 341, 124, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fe65"]
+atlas = ExtResource("1_c61q8")
+region = Rect2(1405, 341, 124, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h13l5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vacj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfrgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nfb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8uk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg7jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7y04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehtgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fe65")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6l14o"]
+radius = 25.0
+height = 122.0
+
+[node name="Crystal" type="Node2D" unique_id=971837942]
+script = ExtResource("1_vacj6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=397543377]
+position = Vector2(4, -18.000008)
+scale = Vector2(0.43951616, 0.5461877)
+sprite_frames = SubResource("SpriteFrames_h13l5")
+animation = &"idle"
+frame = 6
+frame_progress = 0.6679832
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=45362098]
+position = Vector2(0, -60)
+shape = SubResource("CapsuleShape2D_6l14o")

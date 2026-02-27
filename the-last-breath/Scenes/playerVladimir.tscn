@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://upl3dcjl0ky1"]
+
+[ext_resource type="Script" uid="uid://cknin0yjbon3b" path="res://Scenes/character_body_2d.gd" id="1_uu2uj"]
+[ext_resource type="Texture2D" uid="uid://dgs1875umxhvo" path="res://Assets/astronaut_run_spritesheet_8f_pad8.png" id="2_1vqqq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2o6t"]
+radius = 32.0
+height = 106.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_intw8"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(0, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0ery"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(71, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlyvm"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(142, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hihg"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(213, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqikt"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(284, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5e5f"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(355, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt78t"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(426, 0, 71, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo1ga"]
+atlas = ExtResource("2_1vqqq")
+region = Rect2(497, 0, 71, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2poj3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_intw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0ery")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlyvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hihg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqikt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5e5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt78t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo1ga")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Player Animations" type="Node2D" unique_id=2032588168]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1086187279 groups=["Player"]]
+script = ExtResource("1_uu2uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1982869685]
+position = Vector2(-4, -36)
+shape = SubResource("CapsuleShape2D_e2o6t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1164095427]
+position = Vector2(-7, -41)
+scale = Vector2(1.4162579, 1.3792337)
+sprite_frames = SubResource("SpriteFrames_2poj3")
+frame = 6
+frame_progress = 0.597803

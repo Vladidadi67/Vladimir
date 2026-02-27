@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://b7mgp8s3jwdb6"]
+
+[ext_resource type="Script" uid="uid://b7ky1yxou704e" path="res://Scenes/zombie.gd" id="1_h3kin"]
+[ext_resource type="Script" uid="uid://dp6phj61o8t4o" path="res://Scenes/obstacle_ray.gd" id="2_n70j1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rnd5q"]
+load_path = "res://.godot/imported/Gemini_Generated_Image_kitqmrkitqmrkitq-removebg-preview.png-a9073dbbf4bf6c7cff7ec08a741d8327.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n70j1"]
+atlas = SubResource("CompressedTexture2D_rnd5q")
+region = Rect2(12, 123, 110, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyl7r"]
+atlas = SubResource("CompressedTexture2D_rnd5q")
+region = Rect2(122, 123, 110, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy0uf"]
+atlas = SubResource("CompressedTexture2D_rnd5q")
+region = Rect2(232, 123, 110, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2xga"]
+atlas = SubResource("CompressedTexture2D_rnd5q")
+region = Rect2(342, 123, 110, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4slyf"]
+atlas = SubResource("CompressedTexture2D_rnd5q")
+region = Rect2(452, 123, 110, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ia6i"]
+atlas = SubResource("CompressedTexture2D_rnd5q")
+region = Rect2(562, 123, 110, 123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xx3wb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n70j1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyl7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy0uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2xga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4slyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ia6i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnd5q"]
+radius = 32.015625
+
+[node name="Zombie" type="CharacterBody2D" unique_id=368560449]
+script = ExtResource("1_h3kin")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1502630065]
+position = Vector2(1, -31.999992)
+scale = Vector2(0.6136364, 0.6036587)
+sprite_frames = SubResource("SpriteFrames_xx3wb")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.54122895
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1893519093]
+position = Vector2(5, -25)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_rnd5q")
+
+[node name="ObstacleRay" type="RayCast2D" parent="." unique_id=1604124463]
+script = ExtResource("2_n70j1")

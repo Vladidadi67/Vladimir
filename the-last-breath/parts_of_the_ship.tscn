@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://comgviiym17wf"]
+
+[ext_resource type="Texture2D" uid="uid://cfaluvao7my36" path="res://Assets/Gemini_Generated_Image_u4kvbtu4kvbtu4kv-fotor-bg-remover-2026022782742.png" id="1_o0oxi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvf6s"]
+texture = ExtResource("1_o0oxi")
+texture_region_size = Vector2i(200, 200)
+0:1/size_in_atlas = Vector2i(5, 6)
+0:1/0 = 0
+5:1/size_in_atlas = Vector2i(5, 5)
+5:1/0 = 0
+10:1/size_in_atlas = Vector2i(4, 6)
+10:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n2fbh"]
+sources/0 = SubResource("TileSetAtlasSource_dvf6s")
+
+[node name="Parts of the ship" type="Node2D" unique_id=1061175121]
+scale = Vector2(0.08, 0.08)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=496611416]
+position = Vector2(-975, -37.5)
+tile_set = SubResource("TileSet_n2fbh")
+format = 2
+layer_0/tile_data = PackedInt32Array(262141, 0, 1, 131130, 327680, 1, 655483, 655360, 1)
