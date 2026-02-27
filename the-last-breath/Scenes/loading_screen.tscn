@@ -1,24 +1,25 @@
-[gd_scene format=3 uid="uid://dncnv2t8fbk8j"]
+[gd_scene load_steps=3 format=3 uid="uid://dncnv2t8fbk8j"]
 
-[ext_resource type="Script" path="res://Scenes/loading_screen.gd" id="1_oobaa"]
+[ext_resource type="Script" uid="uid://dwtpv0qkjwo1f" path="res://Scenes/loading_screen.gd" id="1_oobaa"]
 [ext_resource type="FontFile" uid="uid://2krgn08630oc" path="res://Game Paused DEMO.otf" id="2_0t5xw"]
 
-[node name="LoadingScreen" type="Node2D" unique_id=374131848]
+[node name="LoadingScreen" type="Node2D"]
 script = ExtResource("1_oobaa")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=124199769]
+[node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -19.0
 offset_top = -17.0
-offset_right = 498.0
-offset_bottom = 241.0
+offset_right = 1248.0
+offset_bottom = 717.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="." unique_id=1630718121]
-offset_left = 7.0
-offset_top = 138.0
-offset_right = 227.0
-offset_bottom = 291.0
+[node name="Label" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 565.0
+offset_right = 660.0
+offset_bottom = 902.0
 theme_override_fonts/font = ExtResource("2_0t5xw")
+theme_override_font_sizes/font_size = 50
 text = "Preparing Oxygen Systems...
 
 
@@ -26,15 +27,29 @@ text = "Preparing Oxygen Systems...
 
 "
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1004829888]
+[node name="ProgressBar" type="ProgressBar" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.0
-offset_top = -13.5
-offset_right = 2.0
-offset_bottom = 13.5
+offset_left = 647.0
+offset_top = 562.0
+offset_right = 784.0
+offset_bottom = 635.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 13.0
+offset_right = 1089.0
+offset_bottom = 514.0
+theme_override_font_sizes/font_size = 50
+text = "This planet was never meant to support life.
+Yet something lives here.
+Beneath the ice.
+Watching.
+You were on a misssion here.
+But now your only mission is to go back"

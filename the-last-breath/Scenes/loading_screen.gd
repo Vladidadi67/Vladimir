@@ -1,23 +1,12 @@
-extends Node2D
+extends Node2D   # If your root is Control, change this to extends Control
 
-@export var next_scene_path: String = "res://Scenes/Level1.tscn"
+@onready var progress_bar = $ProgressBar
 
-var progress := []
-var loading := false
-
-func _ready():
-	ResourceLoader.load_threaded_request(next_scene_path)
-	loading = true
+var load_progress := 0.0
 
 func _process(delta):
-	if loading:
-		var status = ResourceLoader.load_threaded_get_status(next_scene_path, progress)
-
-		if status == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
-			if progress.size() > 0:
-				$ProgressBar.value = progress[0] * 100.0
-
-		elif status == ResourceLoader.THREAD_LOAD_LOADED:
-			var scene = ResourceLoader.load_threaded_get(next_scene_path)
-			get_tree().change_scene_to_packed(scene)
-			loading = false
+	if load_progress < 100:
+		load_progress += 10 * delta   # speed (increase if too slow)
+		progress_bar.value = load_progress
+	else:
+		get_tree().change_scene_to_file("res://Scenes/Level.tscn")
