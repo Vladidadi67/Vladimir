@@ -16,7 +16,11 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="The last breath"
 <<<<<<< HEAD
+<<<<<<< HEAD
 run/main_scene="uid://dcp0o26bbjfwn"
+=======
+run/main_scene="uid://m67f77saf2k"
+>>>>>>> parent of 84b7815 (Merge branch 'main' of https://github.com/Vladidadi67/Vladimir)
 =======
 run/main_scene="uid://m67f77saf2k"
 >>>>>>> parent of 84b7815 (Merge branch 'main' of https://github.com/Vladidadi67/Vladimir)
