@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends RayCast2D
 """
 Zombie AI (CharacterBody2D)
 - Follows the Player (CharacterBody2D) in group: "Player"
@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 	# Gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+
 
 	# Chase player
 	var direction := 0.0
