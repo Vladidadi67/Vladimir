@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq08m4k88apta"]
+[gd_scene format=3 uid="uid://bq08m4k88apta"]
 
 [ext_resource type="Script" path="res://oxygen_bar.gd" id="1_5oaki"]
 
