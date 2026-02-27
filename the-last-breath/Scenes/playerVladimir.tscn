@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://upl3dcjl0ky1"]
+[gd_scene format=3 uid="uid://upl3dcjl0ky1"]
 
-[ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_uu2uj"]
+[ext_resource type="Script" uid="uid://cknin0yjbon3b" path="res://Scenes/character_body_2d.gd" id="1_uu2uj"]
 [ext_resource type="Texture2D" uid="uid://dgs1875umxhvo" path="res://Assets/astronaut_run_spritesheet_8f_pad8.png" id="2_1vqqq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2o6t"]
-radius = 88.0
-height = 230.46143
+radius = 32.0
+height = 106.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_intw8"]
 atlas = ExtResource("2_1vqqq")
@@ -76,21 +76,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player Animations" type="Node2D"]
-scale = Vector2(0.4399984, 0.40395603)
+[node name="Player Animations" type="Node2D" unique_id=2032588168]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1086187279 groups=["Player"]]
 script = ExtResource("1_uu2uj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(1.2727356, -88.00003)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1982869685]
+position = Vector2(-4, -36)
 shape = SubResource("CapsuleShape2D_e2o6t")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(8, -101)
-scale = Vector2(3.452234, 3.3834674)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1164095427]
+position = Vector2(-7, -41)
+scale = Vector2(1.4162579, 1.3792337)
 sprite_frames = SubResource("SpriteFrames_2poj3")
 frame = 6
 frame_progress = 0.597803
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

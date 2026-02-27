@@ -9,4 +9,4 @@ func _process(delta):
 		load_progress += 10 * delta   # speed (increase if too slow)
 		progress_bar.value = load_progress
 	else:
-		get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Level.tscn")

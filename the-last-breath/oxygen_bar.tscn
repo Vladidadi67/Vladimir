@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://bgureq60q7x3u"]
+[gd_scene format=3 uid="uid://bgureq60q7x3u"]
 
 [ext_resource type="Script" uid="uid://b8x8fc6jg1r3o" path="res://canvas_layer.gd" id="1_wsc0g"]
 
