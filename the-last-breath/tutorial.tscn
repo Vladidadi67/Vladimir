@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://df4djucrx84tf"]
+[gd_scene load_steps=4 format=3 uid="uid://df4djucrx84tf"]
 
 [ext_resource type="Script" uid="uid://dhq4c64jjjgsr" path="res://back_button.gd" id="1_7n6eb"]
 [ext_resource type="FontFile" uid="uid://2krgn08630oc" path="res://Game Paused DEMO.otf" id="1_yb1ct"]
+[ext_resource type="AudioStream" uid="uid://d3vevj43mdo64" path="res://Assets/AM I ALONE_ - DREAMCORE.wav" id="3_ehuit"]
 
 [node name="Tutorial" type="Node2D"]
 
@@ -46,5 +47,9 @@ offset_top = 12.0
 offset_right = 49.0
 offset_bottom = 35.0
 text = "BACK"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ehuit")
+autoplay = true
 
 [connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]
