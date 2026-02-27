@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://dcp0o26bbjfwn"]
 
-[ext_resource type="Script" uid="uid://c8hjt8tpho8ci" path="res://Scenes/fog.gd" id="1_mgc0q"]
 [ext_resource type="Texture2D" uid="uid://dxg1xt42w7puw" path="res://Assets/Gemini_Generated_Image_y2y5e5y2y5e5y2y5-removebg-preview (1).png" id="1_pu3va"]
 [ext_resource type="PackedScene" uid="uid://dqcjups6lp73i" path="res://Scenes/crystal.tscn" id="2_0e3vx"]
-[ext_resource type="Script" uid="uid://dwcoe6l5sttim" path="res://Scenes/background.gd" id="2_bb2iq"]
-[ext_resource type="Script" uid="uid://cp6t0og3e2i8o" path="res://Scenes/color_rect.gd" id="3_18r40"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6j5ir"]
 texture = ExtResource("1_pu3va")
@@ -970,35 +967,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6j5ir")
 
 [node name="Main Game" type="Node2D" unique_id=1531621541]
-
-[node name="fog" type="ColorRect" parent="." unique_id=2113748119]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -218.0
-offset_top = -1027.0
-offset_right = -218.0
-offset_bottom = -1027.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.6, 0.8, 1, 0.078431375)
-script = ExtResource("1_mgc0q")
-
-[node name="background" type="CanvasLayer" parent="." unique_id=1200621462]
-script = ExtResource("2_bb2iq")
-
-[node name="ColorRect" type="ColorRect" parent="background" unique_id=2037441812]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -955.0
-offset_top = 416.0
-offset_right = -955.0
-offset_bottom = 416.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.9039431, 1.8291801)
-script = ExtResource("3_18r40")
 
 [node name="Main map" type="TileMap" parent="." unique_id=992302535]
 tile_set = SubResource("TileSet_mgc0q")
