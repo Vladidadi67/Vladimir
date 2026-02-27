@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://upl3dcjl0ky1"]
+
+[ext_resource type="Texture2D" uid="uid://b0hjr5stsn0i3" path="res://Assets/ChatGPT Image Feb 26, 2026, 12_56_57 PM.png" id="1_wqewt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2o6t"]
+radius = 120.0
+height = 402.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu2uj"]
+atlas = ExtResource("1_wqewt")
+region = Rect2(0, 341, 223, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vqqq"]
+atlas = ExtResource("1_wqewt")
+region = Rect2(223, 341, 223, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_intw8"]
+atlas = ExtResource("1_wqewt")
+region = Rect2(446, 341, 223, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0ery"]
+atlas = ExtResource("1_wqewt")
+region = Rect2(669, 341, 223, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlyvm"]
+atlas = ExtResource("1_wqewt")
+region = Rect2(892, 341, 223, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hihg"]
+atlas = ExtResource("1_wqewt")
+region = Rect2(1115, 341, 223, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2poj3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu2uj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vqqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_intw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0ery")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlyvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hihg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Player Animations" type="Node2D" unique_id=2032588168]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1086187279]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1982869685]
+position = Vector2(124, 399)
+shape = SubResource("CapsuleShape2D_e2o6t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1164095427]
+position = Vector2(114, 419)
+scale = Vector2(1.2455556, 1.2419355)
+sprite_frames = SubResource("SpriteFrames_2poj3")

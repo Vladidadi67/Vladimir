@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://m67f77saf2k"]
+[gd_scene format=3 uid="uid://m67f77saf2k"]
 
 [ext_resource type="Script" uid="uid://c8lghky4qimry" path="res://Scenes/main_menu.gd" id="1_8saeu"]
 [ext_resource type="FontFile" uid="uid://h68ux0x7hon3" path="res://Astroz Trial.ttf" id="1_853f1"]
