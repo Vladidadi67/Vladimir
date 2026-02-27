@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgs1875umxhvo" path="res://Assets/astronaut_run_spritesheet_8f_pad8.png" id="2_1vqqq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2o6t"]
-radius = 88.0
+radius = 53.27292
 height = 230.46143
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_intw8"]

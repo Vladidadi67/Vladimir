@@ -1,14 +1,14 @@
-[gd_scene load_steps=0 format=3 uid="uid://bgureq60q7x3u"]
+[gd_scene load_steps=2 format=3 uid="uid://cal6gc5qbqiii"]
 
-[ext_resource type="Script" uid="uid://b8x8fc6jg1r3o" path="res://canvas_layer.gd" id="1_wsc0g"]
+[ext_resource type="Script" uid="uid://bd34pp8imsmmw" path="res://oxygen_bar.gd" id="1_wsc0g"]
 
-[node name="oxygen bar" type="Node2D" unique_id=887899576]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=748008168]
+[node name="oxygen bar" type="CanvasLayer"]
 script = ExtResource("1_wsc0g")
 
-[node name="oxygen bar" type="ProgressBar" parent="CanvasLayer" unique_id=863358430]
-offset_right = 4.0
-offset_bottom = 27.0
+[node name="oxygen bar" type="ProgressBar" parent="."]
+offset_left = -53.0
+offset_top = -104.000015
+offset_right = 0.192482
+offset_bottom = -77.000015
 scale = Vector2(1.8611652, 1.3634299)
 value = 100.0
